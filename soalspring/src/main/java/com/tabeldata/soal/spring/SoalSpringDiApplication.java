@@ -59,8 +59,8 @@ public class SoalSpringDiApplication {
 //            
         TiketRepository tiketRepository = springContainer.getBean(TiketRepository.class);
         tiketRepository.save(new Tiket(1, penumpang, travel, Date.from(Instant.now())));
-        tiketRepository.save(new Tiket(2, penumpang1, travel1, Date.from(Instant.now())));
-        tiketRepository.save(new Tiket(3, penumpang2, travel2, Date.from(Instant.now())));
+        tiketRepository.save(new Tiket(2, penumpang1, travel2, Date.from(Instant.now())));
+        tiketRepository.save(new Tiket(3, penumpang2, travel1, Date.from(Instant.now())));
         Iterable<Tiket> all2 = tiketRepository.findAll();
 //        all2.forEach(tiket ->{
 //            System.out.println(tiket.getId()); 
